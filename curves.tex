@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{amssymb, amsfonts, amsmath, amsthm}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{epsfig,lpic,wrapfig}
+
+
+
+\def\noi{\noindent}%  
+\def\CC{\mathbb{C}}%  
+\def\PP{\mathbb{P}}%  
+\def\NN{\mathbb{N}}%  
+\def\RR{\mathbb{R}}%  
+\def\ZZ{\mathbb{Z}}% 
+\def\QQ{\mathbb{Q}}% 
+
+\def\cC{{\mathcal  C}}%  
+\def\cF{{\mathcal  F}}%  
+\def\cM{{\mathcal  M}}%  
+\def\cS{{\mathcal  S}}%  
+\def\cT{{\mathcal  T}}% 
+
+\def\eps{\varepsilon}%  
+\def\ge{\geqslant}%
+\def\le{\leqslant}%
+\def\phi{\varphi}%
+\def\i{\subset}
+\def\l{\left}
+\def\r{\right}
+\def\<{\langle}
+\def\>{\rangle}
+\def\:{\colon}
+
+%operators
+\def\Const{\operatorname{Const}}
+\def\area{\operatorname{area}}
+\def\vol{\operatorname{vol}}
+\def\diam{\operatorname{diam}}
+\def\codim{\operatorname{codim}}
+\def\dim{\operatorname{dim}}
+\def\dir{\operatorname{dir}}
+\def\dist{\operatorname{dist}}
+\def\pack{\operatorname{pack}}
+\def\Ric{\operatorname{Ric}}
+\def\op{\operatorname}
+\def\parbf{\noindent\textbf}
+
+
+\begin{document}
+
+\title{Curves}
+\author{}
+\date{}
+\maketitle
+
+\parbf{Cycloid.} A cycloid is the curve traced by a point on the rim of a circular wheel as the wheel rolls along a straight line without slippage.
+
+Assume the wheel is a unit circle, 
+its rolls on the $x$-axis and in the upper half-plane with unit speed 
+and the time $t=0$ the point on the rim is in the origin.
+Let us find the position vector $\textbf{f}(t)$ of the point on the rim at time $t$.
+
+Note that coordinates of the center of the wheel at time $t$ is $\textbf{c}(t)=(t,1)$.
+
+Since there is no slippage the arc from the point $\textbf{d}(t)=(t,0)$ on the rim 
+to the $\textbf{f}(t)$ has length $t$.
+It follows that the angle the vectors $\textbf{w}(t)=\textbf{f}(t)-\textbf{c}(t)$ is clockwise rotation of the vector $(0,-1)=\textbf{d}(t)-\textbf{c}(t)$ by angle $t$.
+Therefore 
+\[\textbf{w}(t)=(-\sin t,-\cos t)\]
+and
+\[\textbf{f}(t)=\textbf{c}(t)+\textbf{w}(t)=(t-\sin t,1-\cos t).\]
+
+\begin{center}
+\begin{lpic}[t(4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/cycloid(1)}
+\end{lpic}
+\end{center}
+
+\begin{wrapfigure}{o}{32 mm}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/pedal-curve(1)}
+\lbl[rt]{22.5,15.5;$P$}
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Pedal curve.} The pedal curve is traced by the orthogonal projection of a fixed point $P$ on the tangent lines of a given curve $\textbf{f}(t)$.
+
+
+Write a parametric expression $\textbf{h}(t)$ for the pedal curve for the unit circle $\textbf{f}(t)=(\cos(t),\sin t)$ and the point $P=(1,0)$, so its position vector is $\textbf{i}$.
+
+Denote by $\textbf{w}(t)$ the projection of $\textbf{v}(t)=\textbf{i}-\textbf{f}(t)$ to the tangent line at $\textbf{f}(t)$, so $\textbf{h}(t)=\textbf{f}(t)+\textbf{w}(t)$.
+
+The velocity vector $\textbf{f}'(t)=(-\sin t,\cos t)$ is parallel to the tangent line at $\textbf{f}(t)$.
+Note that $\|\textbf{f}'(t)\|=1$ for any $t$.
+Therefore 
+\begin{align*}
+\textbf{w}(t)
+&=
+(\textbf{f}'(t)\cdot\textbf{v}(t))\textbf{f}'(t)
+\\
+&=(\textbf{f}'(t)\cdot(\textbf{i}-\textbf{f}(t)))\textbf{f}'(t)=
+\\
+&=(\sin^2 t,-\sin t\cos t).
+\intertext{and} 
+\textbf{h}(t)
+&=\textbf{f}(t)+\textbf{w}(t)
+\\
+&=(\cos t+\sin^2t,\sin t-\sin t\cos t).
+\end{align*}
+
+\parbf{Involute.} Involute is a curve obtained from another given curve by attaching an imaginary taut string to the given curve and tracing its free end as it is wound onto that given curve. 
+
+Write a parametric expression $\textbf{h}(t)$ for the involute for the unit circle $\textbf{f}(t)=(\cos(t),\sin t)$ starting at the point $P=(1,0)$, so its position vector is $\textbf{i}$.
+
+Note that $\textbf{f}'(t)=(-\sin t,\cos t)$ and $\|\textbf{f}'(t)\|=1$.
+
+Note that the vector $\textbf{w}(t)=\textbf{h}(t)-\textbf{f}(t)$ is tangent to the circle at $\textbf{f}(t)$ and since the length of the string equals to the length of unwound we get 
+\[\textbf{h}(t)-\textbf{f}(t)=-t\textbf{f}'(t).\]
+Therefore
+\begin{align*}
+\textbf{h}(t)&=\textbf{f}(t)-t\textbf{f}'(t)
+\\
+&=(\cos t+t\sin t,\sin t-t\cos t).
+\end{align*}
+
+\begin{center}
+\begin{lpic}[t(4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/involute(1)}
+\end{lpic}
+\end{center}
+
+
+
+\end{document}
