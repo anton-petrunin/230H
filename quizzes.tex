@@ -1,0 +1,328 @@
+\documentclass{article}
+\usepackage{amssymb, amsfonts, amsmath, amsthm}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{epsfig,lpic,wrapfig}
+
+
+
+\def\noi{\noindent}%  
+\def\CC{\mathbb{C}}%  
+\def\PP{\mathbb{P}}%  
+\def\NN{\mathbb{N}}%  
+\def\RR{\mathbb{R}}%  
+\def\ZZ{\mathbb{Z}}% 
+\def\QQ{\mathbb{Q}}% 
+
+\def\cC{{\mathcal  C}}%  
+\def\cF{{\mathcal  F}}%  
+\def\cM{{\mathcal  M}}%  
+\def\cS{{\mathcal  S}}%  
+\def\cT{{\mathcal  T}}% 
+
+\def\eps{\varepsilon}%  
+\def\ge{\geqslant}%
+\def\le{\leqslant}%
+\def\phi{\varphi}%
+\def\i{\subset}
+\def\l{\left}
+\def\r{\right}
+\def\<{\langle}
+\def\>{\rangle}
+\def\:{\colon}
+
+%operators
+\def\Const{\operatorname{Const}}
+\def\area{\operatorname{area}}
+\def\vol{\operatorname{vol}}
+\def\diam{\operatorname{diam}}
+\def\codim{\operatorname{codim}}
+\def\dim{\operatorname{dim}}
+\def\dir{\operatorname{dir}}
+\def\dist{\operatorname{dist}}
+\def\pack{\operatorname{pack}}
+\def\Ric{\operatorname{Ric}}
+\def\op{\operatorname}
+\def\parbf{\noindent\mathbf}
+
+
+\begin{document}
+
+\title{Quizzes}
+\author{}
+\date{}
+\maketitle
+
+\section*{
+Quiz 1
+}
+
+\noindent 1. Prove or give a counterexample: 
+If $\mathbf{v}\cdot\mathbf{w} = 0$ for all $\mathbf{v}$, then
+  $\mathbf{w} =\mathbf{0}$.
+  
+\noindent
+\textit{Solution:}\\
+If $\mathbf{v}\cdot\mathbf{w} = 0$ for all $\mathbf{v}$ then 
+$$\|\mathbf{w}\|^2=\mathbf{w}\cdot\mathbf{w} = 0.$$\\ 
+Therefore $\|\mathbf{w}\| = 0$ and $\mathbf{w}=\mathbf{0}$.
+
+\ 
+
+\noindent 2.
+Assume $\|\mathbf{v}\|=\|\mathbf{w}\|$. 
+Show that $(\mathbf{v}+\mathbf{w})\perp(\mathbf{v}-\mathbf{w})$.
+
+\ 
+
+\noindent
+\textit{Solution:}\\
+\begin{align*}
+(\mathbf{v}+\mathbf{w})\cdot(\mathbf{v}-\mathbf{w})
+&=\mathbf{v}\cdot\mathbf{v}-\mathbf{w}\cdot\mathbf{w}=
+\\
+&=\|\mathbf{v}\|^2-\|\mathbf{w}\|^2=
+\\
+&=0.
+\end{align*}
+Therefore $(\mathbf{v}+\mathbf{w})\perp(\mathbf{v}-\mathbf{w})$.
+
+\section*{Quiz 2}
+
+\noindent 1. If $\mathbf{v}$ and $\mathbf{w}$ are unit vectors in $\RR^3$, under what condition(s) would $\mathbf{v}\times\mathbf{w}$ also be a unit vector in $\RR^3$? 
+Justify your answer.
+
+\ 
+
+\noindent
+\textit{Solution:}
+Denote by $\alpha$ the angle between $\mathbf{v}$ and $\mathbf{w}$. 
+Then
+\begin{align*}
+\|\mathbf{v}\times\mathbf{w}\|&=\|\mathbf{v}\|\,\|\times\mathbf{w}\|\,\sin\alpha=
+\\
+&=\sin\alpha
+\end{align*}Therefore 
+\[\|\mathbf{v}\times\mathbf{w}\|\iff\sin\alpha=1\iff\alpha=\tfrac\pi2\iff\mathbf{v}\perp\mathbf{w}.\]
+
+\ 
+
+\noindent 2. 
+Find the distance $d$ from the origin to the plane $x+2y+3z=4$.
+
+\ 
+
+\noindent
+\textit{Solution:} Vector $\mathbf{n}=(1,2,3)$ is normal to the plane and the point with the position vector $\mathbf{x}_0=(4,0,0)$ belongs to the plane. 
+The origin has position vector $\mathbf{0}=(0,0,0)$.
+Therefore 
+\begin{align*}
+d&=\frac{\mathbf{n}\cdot(\mathbf{x}_0-\mathbf{0})}{\|\mathbf{n}\|}=
+\\
+&=\frac4{\sqrt{1+4+9}}=
+\\
+&=\frac4{\sqrt{14}}.
+\end{align*}
+
+\section*{
+Quiz 3
+}
+
+
+\noindent 1. Determine if the given equation describes a sphere. 
+If so, find its radius and center.
+\[2x^2 + 2y^2 + 2z^2 + 4x + 4y + 4z + 44 = 0.\]
+
+
+\ 
+
+\noindent
+\textit{Solution:} The equation can be rewritten as
+\[(x+2)^2+(y+2)^2+(z+2)^2=-10.\]
+It has no solutions since the left hand side is nonnegative and right hand side is negative; in particular it does not describe a sphere
+
+\ 
+
+
+\noindent 2. Assume $\rho(t)=t$, $\theta(t)=t$ and $\phi(t)=t$ be the spherical coordinates of the paricle, $0<t<\pi$. 
+Find the position vector $\mathbf{r}(t)$ of the particle in the Cartesian coordinates 
+and its velocity vector $\mathbf{v}(t)=\mathbf{r}'(t)$.
+
+
+\ 
+
+\noindent
+\textit{Solution:} 
+
+\[\mathbf{r}(t)=(t\sin t\cos t,t\sin^2 t, t\cos t).\]
+Therefore
+\[\mathbf{v}(t)=(\sin t\cos t+t(\cos^2t-\sin^2t),\sin^2 t+2t\sin t \cos t, \cos t-t\sin t).\]
+
+\section*{
+Quiz 4
+}
+
+
+\noindent 1. Calculate the arc length of $\mathbf{f}(t)=(3\cos 2t, 3\sin 2t, 3t)$ over the  interval $[0,\pi/2]$.
+
+
+
+\ 
+
+
+\noindent 2. Let $\mathbf{g}(s)$ be a smooth curve with arc length parametrization and $\kappa(s)$ be its curvature.
+  Show that 
+  \[\mathbf{g}\,'''(s)\cdot\mathbf{g}\,'(s)=-\kappa(s)^2\]
+  for any $s$.
+  
+\ 
+
+\noindent
+\textit{Solution:} 
+
+\begin{align*}
+\|\mathbf{g}\,'(s)\|&=1,
+\\
+\mathbf{g}\,'(s)\cdot\mathbf{g}\,'(s) &=1,\quad \text{take the derivative of both sides}
+\\
+2\mathbf{g}\,''(s)\cdot\mathbf{g}\,'(s) &=0,\quad \text{once more}
+\\
+\mathbf{g}\,'''(s)\cdot\mathbf{g}\,'(s)+\mathbf{g}\,''(s)\cdot\mathbf{g}\,''(s) &=0,\quad \text{since}\quad \kappa(s)=\|\mathbf{g}\,''(s)\|,
+\\
+\mathbf{g}\,'''(s)\cdot\mathbf{g} &=-\kappa^2(s).
+\end{align*}
+
+\section*{
+Quiz 5
+}
+
+
+\noindent 1. Parametrize the curve $\mathbf{f}(t) = (\cos 3t, \sin 3t, 4t)$, $t\in [0,\infty)$ by arc length.
+
+
+
+\ 
+
+
+\begin{wrapfigure}{o}{42 mm}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/pedal-curve(1)}
+\lbl[rt]{22.5,15.5;$P$}
+\end{lpic}
+\end{wrapfigure}
+
+\noindent 2. Recall that the pedal curve is traced by the orthogonal projection of a fixed point $P$ on the tangent lines of a given curve $\mathbf{f}(t)$.
+
+Write a parametric expression for the pedal curve for the unit circle 
+$\mathbf{f}(t)=(\cos t,\sin t)$ and the point $P=(1,0)$.
+
+\ 
+
+\noindent\textit{Solution:} 
+The projection of $P$ to the tangent line is the sum of $\mathbf{f}(t)$ and the projection $\mathbf{w}(t)$ of $(1,0)-\mathbf{f}(t)$ in the direction of $\mathbf{f}'(t)$.
+Since $\|\mathbf{f}'(t)\|=1$ we have
+\[\mathbf{w}(t)=[((1,0)-\mathbf{f}(t))\cdot\mathbf{f}'(t)]\mathbf{f}'(t).\]
+Therefore 
+\begin{align*}
+\mathbf{h}(t)&=\mathbf{f}(t)+\mathbf{w}(t)=
+\\
+&=\mathbf{f}(t)+[((1,0)-\mathbf{f}(t))\cdot\mathbf{f}'(t)]\mathbf{f}'(t)
+\end{align*}
+is a parametric equation for the pedal curve.
+
+It remains to do the calculations:
+\begin{align*}
+\mathbf{f}(t)&=(\cos t,\sin t)
+\\
+\mathbf{f}'(t)&=(-\sin t,\cos t)
+\\
+((1,0)-\mathbf{f}(t))\cdot\mathbf{f}'(t)&=-\sin t
+\\
+\mathbf{h}(t)&=(\cos t+\sin^2 t,\sin t-\sin t\cos t).
+\end{align*}
+
+\section*{
+Quiz 6
+}
+
+
+\noindent 1. Compute the gradient of \[f(x,y,z)=xyz.\]
+
+\ 
+
+\noindent 2. Find the equation of the tangent plane to the surface \[xyz=6\] at the point $P=(1,2,3)$.
+
+
+\noindent\textit{Solution:} $f(x,y,z)=xyz$, $\nabla f(x,y,z)=(yz,xz,xy)$.
+Therefore 
+\[\nabla f(1,2,3)=(6,3,2)\]
+and the equation is 
+\[6(x-1)+3(y-2)+2(z-3)=0.\]
+
+\section*{
+Quiz 7
+}
+
+
+\noindent 1. Find three positive numbers $x$, $y$, $z$ whose sum is 10 such that $x^2 y^2 z$ is a maximum.
+
+
+
+\ 
+
+
+
+
+\noindent 2. Prove that if $(x_0,y_0)$ is a minimum point for a smooth function
+  $f(x,y)$, then the tangent plane to the surface $z=f(x,y)$ at the point $(x_0,y_0,f(x_0,y_0))$ is parallel to the $xy$-plane.
+
+\ 
+  
+
+\noindent\textit{Solution:}
+Let $z_0=f(x_0,y_0)$ and $g(x,y,z)=f(x,y)-z$, so 
+\[g(x,y,z)=0\] 
+is the equation for our surface.
+
+The tangent plane to the surface 
+at $(x_0,y_0,z_0)$ is
+\[(x-x_0,y-y_0,z-z_0)\cdot\nabla g(x_0,y_0,z_0)=0\]
+or
+\[(x-x_0)\tfrac{\partial f}{\partial x}(x_0,y_0)+(y-y_0)\tfrac{\partial f}{\partial x}(x_0,y_0)-(z-z_0)=0\]
+
+Since $(x_0,y_0)$ is a minimum point
+\[\tfrac{\partial f}{\partial x}(x_0,y_0)=\tfrac{\partial f}{\partial x}(x_0,y_0)=0.\]
+Therefore the equation of tangent plane boils down to 
+$z=z_0$
+which is an equation of horizontal plane.
+
+\section*{
+Bicycle
+}
+
+Assume that the trajectory of the back wheel of an ideal bicycle is given by smooth plane curve $\mathbf{b}(t)$, here $t$ denotes time. Write an expression for the trajectory of the front wheel $\mathbf{f}(t)$. 
+Show that the speed of the back wheel can not exceed the speed of the front wheel.
+We assume that in the ideal bicycle the distance from back wheel and front wheel is fixed, let us denote it by $R$ and the back wheel always moves in the direction to the front wheel.
+
+\ 
+  
+
+\noindent\textit{Solution:} Note that $\mathbf{u}(t)=\mathbf{b}'(t)/\|\mathbf{b}'(t)\|$ is the unit vector in the direction from $\mathbf{b}(t)$ to $\mathbf{f}(t)$.
+Therefore
+\begin{align*}
+\mathbf{f}(t)&=\mathbf{b}(t)+R\mathbf{u}(t)=
+\\
+&=\mathbf{b}(t)+R\frac{\mathbf{b}'(t)}{\|\mathbf{b}'(t)\|}.
+\end{align*}
+and 
+\begin{align*}
+\mathbf{f}'(t)&=\mathbf{b}'(t)+R\mathbf{u}'(t).
+\end{align*}
+
+Since $\|\mathbf{u}(t)\|=1$ we have $\mathbf{u}'(t)\perp\mathbf{u}(t)\parallel \mathbf{b}'(t)$. By Pythagorean theorem,
+\[\|\mathbf{f}'(t)\|^2=\|\mathbf{b}'(t)\|^2+R^2\|\mathbf{u}'(t)\|^2.\]
+In particular, 
+\[\|\mathbf{f}'(t)\|\ge \|\mathbf{b}'(t)\|\]
+for any $t$.
+
+
+\end{document}
