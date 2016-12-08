@@ -527,10 +527,52 @@ By Green's formula,
 
 
 
+\section*{
+Quiz 14
+}
+
+\noindent 1. Use the Divergence Theorem to evaluate the surface integral
+\[\iint\limits_{\Sigma} \mathbf{f}\cdot d\sigma,\]
+where
+$\mathbf{f}(x,y,z) = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$ and
+$\Sigma$ is the boundary of the cube $0 \le x,y,z \le 1$.
+
+
+\
 
 
 
+\noindent 2. Show that 
+\[\mathrm{div}(f\mathbf{g})=f\mathrm{div}\mathbf{g}+\nabla f\cdot\mathbf{g}.
+\]
+for any scalar function $f$ and a vector field $\mathbf{g}$ on $\RR^3$.
 
+\ 
+
+\noindent\textit{Solution:}
+Assume $\mathbf{g}=(P,Q,R)$.
+Applying the definition of divergence and the product rule, we get
+\begin{align*}
+\mathrm{div}(f\mathbf{g})&=\frac{\partial (fP)}{\partial x}+\frac{\partial (fQ)}{\partial y}+\frac{\partial(fR)}{\partial z}
+\\
+&=\frac{\partial f}{\partial x}P+f\frac{\partial P}{\partial x}
++\frac{\partial f}{\partial y}Q+f\frac{\partial Q}{\partial y}
++\frac{\partial f}{\partial z}R+f\frac{\partial R}{\partial z}.
+\end{align*}
+
+On the other hand,
+\begin{align*}
+f\mathrm{div}\mathbf{g}&=f\frac{\partial P}{\partial x}
++f\frac{\partial Q}{\partial y}
++f\frac{\partial R}{\partial z}
+\end{align*}
+and 
+\begin{align*}
+\nabla f\cdot\mathbf{g}=\frac{\partial f}{\partial x}P
++\frac{\partial f}{\partial y}Q
++\frac{\partial f}{\partial z}R.
+\end{align*}
+Hence the statement follows.
 
 
 \section*{
